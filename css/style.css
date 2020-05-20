@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav div {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav a {
+  font-size: large;
+  color: white;
+  width: 125px;
+  text-decoration: none;
+  padding: 15px;
+  font-family: monospace;
+}
+
+.active {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 5px black solid;
+}
+
+header {
+  margin-top: 45px;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 4.5em;
+  font-family: monospace;
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  font-family: monospace;
+  margin: 20px;
+  display: grid;
+}
+
+.film-a {
+  margin: 25px;
+  display: grid;
+  grid-template: 40px 120px 420px / 1fr minmax(345px, 450px) minmax(350px, 450px) 1fr;
+  grid-gap: 10px;
+}
+
+.film-a img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.film-a a {
+  grid-area: 1 / 3 / span 3 / span 1;
+  justify-self: right;
+}
+
+.film-a h2 {
+  font-size: 2.5em;
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.film-a .synopsis {
+  grid-area: 2 / 2 / span 1 / span 1;
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+.film-a .review {
+  grid-area: 3 / 2 / span 1 / span 1;
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+.film-b {
+  margin: 25px;
+  display: grid;
+  grid-template: 40px 120px 420px / 1fr minmax(350px, 450px) minmax(345px, 450px) 1fr;
+  grid-gap: 10px;
+}
+
+.film-b img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.film-b a {
+  grid-area: 1 / 2 / span 3 / span 1;
+  justify-self: left;
+}
+
+.film-b h2 {
+  font-size: 2.5em;
+  grid-area: 1 / 3 / span 1 / span 1;
+}
+
+.film-b .synopsis {
+  grid-area: 2 / 3 / span 1 / span 1;
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+.film-b .review {
+  grid-area: 3 / 3 / span 1 / span 1;
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+footer {
+  bottom: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 70px;
+  padding: 10px;
+}
+
+footer p {
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 842px) {
+  h1 {
+    font-size: 4em;
+  }
+  main {
+    margin: 5px;
+  }
+}
